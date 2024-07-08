@@ -131,7 +131,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
-    vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor
+    vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -159,6 +160,9 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     vendor.qti.hardware.camera.aon@1.3.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
+    libpng.vendor \
+    liblz4.vendor \
+    libusbhost.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_COPY_FILES += \
@@ -246,6 +250,7 @@ PRODUCT_PACKAGES += \
 include hardware/qcom-caf/sm8550/gps/gps_vendor_product.mk
 
 PRODUCT_PACKAGES += \
+    libcurl.vendor \
     android.hardware.gnss-V1-ndk_platform.vendor \
     android.hardware.gnss-V2-ndk.vendor
 
@@ -499,6 +504,7 @@ PRODUCT_PACKAGES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
+    libjsoncpp.vendor \
     libqti_vndfwk_detect.vendor \
     libqti_vndfwk_detect_vendor \
     libvndfwk_detect_jni.qti.vendor \
@@ -531,6 +537,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.relative_humidity.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
+
+# SQLite
+PRODUCT_PACKAGES += \
+    libsqlite.vendor
 
 # Telephony
 PRODUCT_PACKAGES += \
